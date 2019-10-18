@@ -89,6 +89,8 @@ Sama seperti Task 1
 
 ### Task 1
 
+Flag: `MoreInterestingCryptoChallengesAhead!`
+
 1. Ekstraksi public certificate pada bari syang berisi info "Server Hello,
 Certificate, Server Hello Done".
 2. Lihat informasi pada Transport Layer Security > TLSv1 Record Layer :
@@ -187,6 +189,15 @@ Untuk membuat private certificate nya kita dapat menggunakan RsaCtfTool
 	lI4rshqBvhCfrDcrtBuu7b38Z1dz+ky1xc4ZO17bnA==
 	-----END RSA PRIVATE KEY-----
 	```
+
+5. Men-*decrypt https*
+
+Setelah mendapatkan private-key, gunakan key tersebut menggunakan wireshark.
+Edit -> Preferences -> RSA key -> Add new keyfile, pilih private.key yang sudah
+digenerate tadi. Reload file packet data tersebut dan follow TLS stream dari
+baris yang berisikan info "OK (text/html)".
+
+![](img/ssl_task_1.png)
 
 ### Task 2
 

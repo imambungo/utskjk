@@ -53,5 +53,5 @@ eb5582fe21cc345f53534682b75c36
 8d73c9""".replace('\n', '')
 
 p, q = fermat_factors(int(n, 16))
-print "p =", p
-print "q =", q
+print("p =", p)
+print("q =", q)
