@@ -47,7 +47,7 @@ https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744
 
 #### Hash functions
 
-1. account.txt (10 points)
+1. `angelica`, `kaitlynn4`, `iluveddie1` (10 points) 
 
 #### HTTP webfiles/pcap files
 
@@ -64,60 +64,23 @@ https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744
 
 ### Hash Functions
 
-```console
-   #########################################################################
-   #     __  __                     __           ______    _____           #
-   #    /\ \/\ \                   /\ \         /\__  _\  /\  _ `\         #
-   #    \ \ \_\ \     __      ____ \ \ \___     \/_/\ \/  \ \ \/\ \        #
-   #     \ \  _  \  /'__`\   / ,__\ \ \  _ `\      \ \ \   \ \ \ \ \       #
-   #      \ \ \ \ \/\ \_\ \_/\__, `\ \ \ \ \ \      \_\ \__ \ \ \_\ \      #
-   #       \ \_\ \_\ \___ \_\/\____/  \ \_\ \_\     /\_____\ \ \____/      #
-   #        \/_/\/_/\/__/\/_/\/___/    \/_/\/_/     \/_____/  \/___/  v1.2 #
-   #                                                             By Zion3R #
-   #                                                    www.Blackploit.com #
-   #                                                   Root@Blackploit.com #
-   #########################################################################
---------------------------------------------------
- HASH: 9852d983162e307c438712f6cca37db2a69d69694df77c348477b33eaf5a7eff567921d2953b801c6a93f84e12ad0991bf5e1a58f96c305b8f1dc369d4d30e00
+Identifikasi tipe hash dari setiap hash menggunakan [hash-identifier](https://github.com/blackploit/hash-identifier):
 
-Possible Hashs:
-[+] SHA-512
-[+] Whirlpool
+![](img/hash-id.png)
 
-Least Possible Hashs:
-[+] SHA-512(HMAC)
-[+] Whirlpool(HMAC)
---------------------------------------------------
- HASH: 5efb876b5c9852ff621c1d0988511784935117295e4779de0080875578424bf72d554cf8a012baadd8f8a77c121844c5
+Gunakan website [md5decrypt.net](https://md5decrypt.net/) untuk mendecrypt hash
+sesuai tipe hash:
 
-Possible Hashs:
-[+] SHA-384
-[+] SHA-384(HMAC)
---------------------------------------------------
- HASH: cc401e187bfbadd2df7d1d66a2f1312b6a8ef4de80b1244165d94cf9b402cf28a4d73edeb2561178e6ba8720caaeaf4171559dfed4f5b19de746ff817e8f595d
-
-Possible Hashs:
-[+] SHA-512
-[+] Whirlpool
-
-Least Possible Hashs:
-[+] SHA-512(HMAC)
-[+] Whirlpool(HMAC)
---------------------------------------------------
- HASH:
-```
-
-```
-angelica
-kaitlynn4
-iluveddie1
-```
+- Password 1:
+    ![](img/solusi1_1.png)
+- Password 2:
+    ![](img/solusi1_2.png)
+- Password 3:
+    ![](img/solusi1_3.png)
 
 ### HTTP webfiles/pcap files
 
 #### Task 1
-
-flag :`HTTP_viewers_is_easY`
 
 1. Buka file task_1_http_viewers.pcapng menggunakan wireshark
 
@@ -129,8 +92,6 @@ flag :`HTTP_viewers_is_easY`
 
 #### Task 2
 
-Flag:`This_is_HTTP_headers_`
-
 ##### Cara 1
 
 Lihat header di Packet Details Panel
@@ -139,7 +100,7 @@ Lihat header di Packet Details Panel
 
 ##### Cara 2
 
-Sama seperti Task 1
+Sama seperti [Task 1](#task-1).
 
 ![](img/http2cara2.png)
 
@@ -259,7 +220,7 @@ baris yang berisikan info "OK (text/html)".
 
 ![](img/ssl_task_1.png)
 
-### Task 2
+#### Task 2
 
 flag:`when_solving_problems_dig_at_the_roots_instead_of_just_hacking_at_the_leaves`
 
