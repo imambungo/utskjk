@@ -132,13 +132,29 @@ Sama seperti [Task 1](#task-1).
 6. Dapatkan passwordnya menggunakan [md5decrypt.net](https://md5decrypt.net/):
 	![](img/password.png)
 
+7. Masih di HTTP Stream tadi, copy URL Host dan buka di browser:
+	![](img/urlhost.png)
+	![](img/halamanlogin.png)
+
+8. Masukkan username dan password, klik submit:
+	![](img/flagjs.png)
+
+##### Cara alternatif (tanpa decode hash)
+
+Copy line 15-26:
+![](img/alternatif.png)
+
+Buka DevTools, pilih console, dan paste programnya:
+![](img/console.png)
+
+Tekan enter:
+![](img/flagalternatif.png)
+
 ### TLS/SSL
 
 #### Task 1
 
-Flag: `MoreInterestingCryptoChallengesAhead!`
-
-1. Ekstraksi public certificate pada bari syang berisi info "Server Hello,
+1. Ekstraksi public certificate pada bari yang berisi info "Server Hello,
 Certificate, Server Hello Done".
 2. Lihat informasi pada Transport Layer Security > TLSv1 Record Layer :
 Handshake Protocol: Certificate, klik kanan pada certificate dan pilih Export
@@ -247,8 +263,6 @@ baris yang berisikan info "OK (text/html)".
 ![](img/ssl_task_1.png)
 
 #### Task 2
-
-flag:`when_solving_problems_dig_at_the_roots_instead_of_just_hacking_at_the_leaves`
 
 Lakukan langkah 1-3 dari Task 1:
 
@@ -378,7 +392,7 @@ qY79Bl7RxFQJx/MvaalajTMCCZ1Oo2MzZsqagvhfW9w/RRY13mjSF78LFbnZros=
 -----END CERTIFICATE-----
 ```
 
-Di dapat nilai modulus = 4103 dan exponent = 31337
+Didapat nilai modulus = 4103 dan exponent = 31337
 
 untuk mendapatkan nilai p dan q, gunakan factorize2.py, didapat:  
 p = 345709341936068338730678003778405323582109317075021198605451259081268526297654818935837545259489748700537817158904946124698593212156185601832821337576558516676594811692389205842412600462658083813048872307642872332289082295535733483056820073388473845450507806559178316793666044371642249466611007764799781626418800031166072773475575269610775901034485376573476373962417949231752698909821646794161147858557311852386822684705642251949742285300552861190676326816587042282505137369676427345123087656274137257931639760324708350318503061363031086796994100943084772281097123781070811610760735943618425858558459014484742232019973  
