@@ -1,31 +1,68 @@
 # UTS Keamanan Jaringan Komputer
 
-M Imam Pratama
-09021281722063
+M Imam Pratama  
+09021281722063  
 IF Reg A 17
 
-## Flag
+## Aturan
 
-- Hash functions
-	1. account.txt (10 points)
-- HTTP webfiles/pcap files
-	1. `HTTP_viewers_is_easY` (10 points)
-	2. `This_is_HTTP_headers_` (10 points)
-	3. (20 points)  
-	   username: Octocat  
-	   password: xNnWo6272k7x  
-       flag: `JavaScript Encryption`
-- TLS/SSL
-	1. `MoreInterestingCryptoChallengesAhead!` (20 points)
-	2. `when_solving_problems_dig_at_the_roots_instead_of_just_hacking_at_the_leaves` (30 points)
+- Beberapa soal sebagian merupakan soal capture the flag atau ctf (bisa dibaca
+  di
+https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744).
+- Setiap soal akan diberikan hints/clue agar bisa menjawab, dan beberapa task,
+  sudah disediakan tools untuk memecahkan masalah.
+- Dalam memecahkan permasalahan/soal, kita harus menggunakan tools yang
+  berhubungan dengan soal tersebut, misalkan soal dengan file .pcap akan dapat
+  dibuka dengan wireshark atau tcpdump.
+- Untuk format penjelasan jawaban terhadap soal disebut dengan write-up, setiap
+  soal akan di jawab dengan write-up nya, beserta referensi website dimana anda
+  mendapatkan tata cara dalam memecahkan masalah tersebut.
 
-fix rsa option not found:
-https://osqa-ask.wireshark.org/questions/35600/not-able-to-configure-wireshark-with-gnutls/35616
+## Soal
 
-fix rsa asking for password:
-https://ask.wireshark.org/question/344/ive-imported-an-pem-key-but-why-wireshark-recognize-it-as-p12/
+#### Hash functions
 
-## Hash Functions
+1. account.txt (10 points)  
+   hints: hash functions, brute force.  
+   note: untuk soal Hash function, adalah men-decode password yang tersedia
+	  pada soal.
+
+#### HTTP webfiles/pcap files
+
+1. task_1_http_viewers.pcapng (10 points)  
+   hints: http stream.
+2. task_2_http_headers.pcapng (10 points)  
+   hints: http stream headers.
+3. task_3_website_login.pcapng (20 points)  
+   hints: javascript, js obfuscator, weblogin, hash function algorithms.
+
+#### TLS/SSL
+
+1. tls/ssl_part1 -> task_ssl.pcap (20 points)  
+   hints: tlsv1, ssl, rsa
+2. tls/ssl_part2 -> e_corp_pki.pcapng (30points)  
+   hints: tlsv1, ssl, modulus, exponent, rsa.
+
+## Flag/Jawaban
+
+#### Hash functions
+
+1. account.txt (10 points)
+
+#### HTTP webfiles/pcap files
+
+1. `HTTP_viewers_is_easY` (10 points)
+2. `This_is_HTTP_headers_` (10 points)
+3. `JavaScript Encryption` (20 points)
+
+#### TLS/SSL
+
+1. `MoreInterestingCryptoChallengesAhead!` (20 points)
+2. `when_solving_problems_dig_at_the_roots_instead_of_just_hacking_at_the_leaves` (30 points)
+
+## Write-ups
+
+### Hash Functions
 
 ```console
    #########################################################################
@@ -76,9 +113,9 @@ kaitlynn4
 iluveddie1
 ```
 
-## HTTP webfiles/pcap files
+### HTTP webfiles/pcap files
 
-### Task 1
+#### Task 1
 
 flag :`HTTP_viewers_is_easY`
 
@@ -90,27 +127,27 @@ flag :`HTTP_viewers_is_easY`
 3. Lihat hasilnya
 	![](img/http1_2.png)
 
-### Task 2
+#### Task 2
 
 Flag:`This_is_HTTP_headers_`
 
-#### Cara 1
+##### Cara 1
 
 Lihat header di Packet Details Panel
 
 ![](img/http2cara1.png)
 
-#### Cara 2
+##### Cara 2
 
 Sama seperti Task 1
 
 ![](img/http2cara2.png)
 
-### Task 3
+#### Task 3
 
-## TLS/SSL
+### TLS/SSL
 
-### Task 1
+#### Task 1
 
 Flag: `MoreInterestingCryptoChallengesAhead!`
 
@@ -515,3 +552,12 @@ n = """
 Setelah itu gunakan factorize2.py untuk mendapatkan nilai p dan q yang asli
 
 Ups, ternyata tidak berhasil, program berjalan terlalu lama.
+
+### Kendala
+
+fix rsa option not found:
+https://osqa-ask.wireshark.org/questions/35600/not-able-to-configure-wireshark-with-gnutls/35616
+
+fix rsa asking for password:
+https://ask.wireshark.org/question/344/ive-imported-an-pem-key-but-why-wireshark-recognize-it-as-p12/
+
