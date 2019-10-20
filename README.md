@@ -106,6 +106,32 @@ Sama seperti [Task 1](#task-1).
 
 #### Task 3
 
+1. Buka file task_1_http_viewers.pcapng menggunakan wireshark.
+
+2. Follow HTTP Stream dari baris yang berisi info "GET /login.js HTTP/1.1", maka kita akan mendapatkan potongan program javascript yang ter-obfuscate.
+	![](img/obfuscated.png)
+
+3. Cari cara untuk "reverse" obfuscate:
+	![](img/googling.png)
+	Didapat solusi yang jelas dan to the point:
+	![](img/jawabanSO.png)
+
+4. Gunakan http://jsbeautifier.org/ untuk men-deobfuscate program tadi:
+	![](img/deobfuscate.png)
+	Jika kita lihat userInfo, sepertinya berisi username dalam bentuk hex dan
+	password dalam bentuk enkripsi hash. Jika kita perhatikan lagi programnya,
+	maka kita akan tahu tipe hash-nya adalah sha256.
+	![](img/tipehash.png)
+
+5. Dapatkan username dengan mengkonversinya dari hex menggunakan fungsi yang
+	pernah saya buat sebelumnya:  
+	![](img/hextostring.png)
+<br>
+	![](img/username.png)
+
+6. Dapatkan passwordnya menggunakan [md5decrypt.net](https://md5decrypt.net/):
+	![](img/password.png)
+
 ### TLS/SSL
 
 #### Task 1
