@@ -78,6 +78,25 @@ sesuai tipe hash:
 - Password 3:
     ![](img/solusi1_3.png)
 
+#### Cara lain
+
+Cara lain bisa menggunakan
+[JohnTheRipper](https://github.com/magnumripper/JohnTheRipper). Bisa
+menggunakan *word list* seperti
+[rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/) atau
+menggunakan metode incremental yang mencoba semua kemungkinan password. Karena
+jaringan internet yang kurang mendukung, saya tidak bisa mendownload file
+rockyou.txt dan mencoba menggunakan metode incremental.
+
+Password pertama dapat dengan mudah didapat setelah beberapa detik, tetapi
+terlalu lama untuk password kedua dan ketiga. Password pertama memiliki panjang
+8 digit, sedangkan password kedua 9 digit dan password ketiga 10 digit. Jika
+password pertama membutuhkan waktu 4 detik dan satu digit memiliki kombinasi 70
+karakter (perkiraan huruf besar + huruf kecil + angka + simbol lain), maka
+password kedua membutuhkan 280 detik untuk dipecahkan dan password ketiga butuh
+280 × 70 = 19600 detik atau 5 jam 26 menit. Oleh karena itu, saya menggunakan
+bantuan [md5decrypt.net](https://md5decrypt.net/).
+
 ### HTTP webfiles/pcap files
 
 #### Task 1
@@ -141,10 +160,10 @@ Sama seperti [Task 1](#task-1).
 
 ##### Cara alternatif (tanpa decode hash)
 
-Copy line 15-26:
+Copy line 15-26:  
 ![](img/alternatif.png)
 
-Buka DevTools, pilih console, dan paste programnya:
+Buka DevTools browser, pilih console, dan paste programnya:  
 ![](img/console.png)
 
 Tekan enter:
