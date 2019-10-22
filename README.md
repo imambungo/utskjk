@@ -282,7 +282,7 @@ baris yang berisikan info "OK (text/html)".
 
 #### Task 2
 
-Lakukan langkah 1-3 dari Task 1:
+Lakukan langkah 1-3 dari [Task 1](#task-1-1):
 
 ```console
 imampt@galatulis:~/UTS/tlsssl_part1$ openssl x509 -inform DER -in certificate.der -text
