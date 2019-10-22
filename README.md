@@ -145,7 +145,6 @@ Sama seperti [Task 1](#task-1).
 5. Dapatkan username dengan mengkonversinya dari hex menggunakan fungsi yang
 	pernah saya buat sebelumnya:  
 	![](img/hextostring.png)
-<br>
 	![](img/username.png)
 
 6. Dapatkan passwordnya menggunakan [md5decrypt.net](https://md5decrypt.net/):
