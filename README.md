@@ -529,9 +529,22 @@ Coba ubah juga nilai hex di bawah "kunci" ke string:
 
 ### Kendala
 
-fix rsa option not found:
-https://osqa-ask.wireshark.org/questions/35600/not-able-to-configure-wireshark-with-gnutls/35616
+#### Tidak ada opsi untuk menggunakan RSA keyfile di wireshark
 
-fix rsa asking for password:
-https://ask.wireshark.org/question/344/ive-imported-an-pem-key-but-why-wireshark-recognize-it-as-p12/
+Solusinya di linux ialah menginstall wireshark dari source-nya menggunakan opsi
+`--with-ssl`.
+
+Sumber: https://osqa-ask.wireshark.org/questions/35600/not-able-to-configure-wireshark-with-gnutls/35616
+
+#### RSA keyfile sudah dimasukkan, tapi wireshark malah minta password
+
+Jika begitu kejadiannya, kemungkinan ada kesalahan dalam membuat
+file *private.key*. Untuk mengecek apakah file private.key sudah valid,
+jalankan:
+
+```
+openssl rsa -in private.key -check
+```
+
+Sumber: https://ask.wireshark.org/question/344/ive-imported-an-pem-key-but-why-wireshark-recognize-it-as-p12/
 
